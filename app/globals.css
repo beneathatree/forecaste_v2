@@ -53,6 +53,9 @@ body{
     padding-top: 5px;
     padding-right: 7px;
     padding-left: 7px;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 #start-bg-vid{
