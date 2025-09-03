@@ -1,5 +1,30 @@
+"use client"
+
 import Head from "next/head";
 import Script from "next/script";
+import { gsap } from "gsap";
+
+//gsap animation on click of #start-btn:
+function startGame() {
+    gsap.to("#leftGate", {
+      duration: 1.2,
+      scaleX: 0.1,
+      skewY: -20,
+      opacity: 0.4,
+      ease: "power2.out",
+    })
+
+    gsap.to("#rightGate", {
+      duration: 1.2,
+      scaleX: 0.1,
+      skewY: 20,
+      opacity: 0.4,
+      ease: "power2.out",
+//      onComplete: () => {
+//      gameStart()
+//      }
+    })
+}
 
 export default function Home() {
   return (
@@ -1178,7 +1203,7 @@ export default function Home() {
         </svg>
       </div>
       <div id="viewport">
-        <button id="start-btn">Start!</button>
+        <button id="start-btn" onClick={startGame}>Start!</button>
       </div>
     </div>
     </>
