@@ -58,11 +58,6 @@ body{
     border-radius: 5px;
 }
 
-#start-bg-vid{
-    position: absolute;
-    z-index: 1;
-}
-
 .normalText{
     color: rgb(0, 0, 0);
     font-family: Helvetica, sans-serif;
