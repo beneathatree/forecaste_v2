@@ -3,3 +3,149 @@
 body {
   font-family: Helvetica, sans-serif;
 }
+
+html, body{
+    height: 99%;
+}
+
+svg{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+#app{
+    width: 400px;
+    display: flex;
+    position: relative;
+    justify-content:  center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: black 1px solid;
+}
+
+#title {
+    font-family: Helvetica, sans-serif;
+    color:blue;
+}
+
+#viewport{
+    height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#start-btn{
+    z-index: 12;
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+#start-bg-vid{
+    position: absolute;
+    z-index: 1;
+}
+
+.normalText{
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, sans-serif;
+    font-size: medium;
+}
+
+#viewport-current-content{
+    padding: 50px;
+}
+
+#gameContainer{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* svgs for start screen */
+#clouds{
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    right: 30px;
+}
+
+#college{
+    position: absolute;
+    top: 280.654px;
+    right: 83.952px;
+    left: 82.166px;
+}
+
+#leftWall{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 10;
+
+}
+
+#rightWall{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    z-index: 10;
+}
+
+#floor{
+    position: absolute;
+    bottom: -10px;
+    left: -5%;
+}
+
+#leftGate{
+    position: absolute;
+    left: 65.910px;
+    top: 55.317px;
+    transform-origin: left bottom;
+}
+
+#rightGate{
+    position: absolute;
+    top: 55.317px;
+    right: 70.726px;
+    transform-origin: right bottom;
+}
+
+#human{
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    right: 152.923px;
+    left: 120px;
+}
+
+/*
+#leftDoor{
+    background-color: white;
+    transform-origin: left bottom;
+}
+
+#rightDoor{
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    transform-origin: right bottom;
+}*/
