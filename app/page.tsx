@@ -3,8 +3,8 @@
 import Head from "next/head";
 import Script from "next/script";
 import { gsap } from "gsap";
-import Clouds from "./components/clouds";
-import College from "./components/college";
+import Clouds from "./components/svg/clouds";
+import College from "./components/svg/college";
 
 //gsap animation on click of #start-btn:
 function startGame() {
