@@ -10,27 +10,11 @@ import Floor from "./components/svg/floor";
 import LeftGate from "./components/svg/leftGate";
 import RightGate from "./components/svg/rightGate";
 import Human from "./components/svg/human";
+import { gateOpen } from "./components/functions/gateOpen";
 
 //gsap animation on click of #start-btn:
-function startGame() {
-    gsap.to("#leftGate", {
-      duration: 1.2,
-      scaleX: 0.1,
-      skewY: -20,
-      opacity: 0.4,
-      ease: "power2.out",
-    })
-
-    gsap.to("#rightGate", {
-      duration: 1.2,
-      scaleX: 0.1,
-      skewY: 20,
-      opacity: 0.4,
-      ease: "power2.out",
-//      onComplete: () => {
-//      gameStart()
-//      }
-    })
+const startGame = () => {
+  gateOpen()
 }
 
 export default function Home() {
@@ -39,7 +23,6 @@ export default function Home() {
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="styles.css"/>
     </Head>
     <div id="app">
       <h1 id="title">forecaste</h1>
