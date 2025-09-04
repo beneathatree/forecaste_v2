@@ -2,9 +2,14 @@
 
 body {
   font-family: Helvetica, sans-serif;
+  height: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 }
 
-html, body{
+html{
     height: 99%;
 }
 
@@ -12,67 +17,4 @@ svg{
     display: block;
     height: auto;
     max-width: 100%;
-}
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-}
-
-#app{
-    width: 400px;
-    display: flex;
-    position: relative;
-    justify-content:  center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ffffff;
-    border: black 1px solid;
-}
-
-#title {
-    font-family: Helvetica, sans-serif;
-    color:blue;
-}
-
-#viewport{
-    height: 650px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-#start-btn{
-    z-index: 12;
-    font-family: Helvetica, sans-serif;
-    font-size: large;
-    padding-top: 5px;
-    padding-right: 7px;
-    padding-left: 7px;
-    background-color: black;
-    color: #ffffff;
-    border-radius: 5px;
-}
-
-.normalText{
-    color: rgb(0, 0, 0);
-    font-family: Helvetica, sans-serif;
-    font-size: medium;
-}
-
-#viewport-current-content{
-    padding: 50px;
-}
-
-#gameContainer{
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    overflow: hidden;
 }
