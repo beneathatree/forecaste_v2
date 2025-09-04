@@ -27,14 +27,14 @@ export default function Home() {
     <div id="app">
       <h1 id="title">forecaste</h1>
       <div id="gameContainer">
-        <Clouds/>
-        <College/>
-        <LeftWall/>
-        <RightWall/>
-        <Floor/>
-        <LeftGate/>
-        <RightGate/>
-        <Human/>
+        <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
+        <College className="absolute top-[280.654px] left-[82.166px] right-[83.952px]"/>
+        <LeftWall className="absolute top-[-2px] left-[-2px] z-10"/>
+        <RightWall className="absolute top-[-2px] right-[-2px] z-10"/>
+        <Floor className="absolute bottom-[-10px] left-[-5%]"/>
+        <LeftGate className="absolute left-[65.910px] top-[55.317px] origin-bottom-left"/>
+        <RightGate className="absolute top-[55.317px] right-[70.726px] origin-bottom-right"/>
+        <Human className="absolute z-20 bottom-0 right-[152.923px] left-[120px]"/>
       </div>
       <div id="viewport">
         <button id="start-btn" onClick={startGame}>Start!</button>
