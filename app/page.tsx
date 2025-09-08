@@ -11,6 +11,7 @@ import RightGate from "./components/svg/rightGate";
 import Human from "./components/svg/human";
 import { gateOpen } from "./components/functions/gateOpen";
 import { resetGame } from "./components/functions/resetGame";
+import BasicButton from "./components/functions/basicButton";
 
 //gsap animation on click of #start-btn:
 const startGame = () => {
@@ -43,20 +44,12 @@ export default function Home() {
         <Human className="absolute z-20 bottom-0 right-[152.923px] left-[120px]"/>
       </div>
       <div 
-        className="z-[30] h-[650px] w-full flex items-end justify-center relative"
+        className="z-[30] h-[650px] w-full flex items-end pb-3 justify-center relative"
         id="viewport">
         <div id="buttonContainer"
           className="flex flex-row gap-3">
-          <button 
-            className="z-30 font-sans text-lg pt-1 pb-1 pr-2 pl-2 bg-black text-white rounded-md"
-            id="start-btn" 
-            onClick={startGame}>Start!
-          </button>
-          <button 
-            className="z-30 font-sans text-lg pt-1 pb -1 pr-2 pl-2 bg-black text-white rounded-md"
-            id="start-btn" 
-            onClick={resetGame}>Reset
-          </button>
+          <BasicButton id="start-btn" text="Start!" onClick={startGame} className="hover:bg-gray-800"/>
+          <BasicButton id="reset-btn" text="Reset" onClick={resetGame} className="hover:bg-red-500"/>
         </div>
       </div>
     </div>
