@@ -27,10 +27,10 @@ export default function Home() {
                 What do you do? 
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton id="isolate-btn" text="Isolate yourselves." className="hover:bg-gray-800"/></li>
-                <li><BasicButton id="smallBonds-btn" text="Form small bonds." className="hover:bg-gray-800"/></li>
+                <li><BasicButton href="/isolate" id="isolate-btn" text="Isolate yourselves." className="hover:bg-gray-800"/></li>
+                <li><BasicButton href="/small-bonds" id="smallBonds-btn" text="Form small bonds." className="hover:bg-gray-800"/></li>
                 <li><BasicButton id="coin-btn" text="Flip a coin." className="hover:bg-gray-800"/></li>
-                <li><BasicButton id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
+                <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
     </div>

@@ -22,12 +22,13 @@ export default function Home() {
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="viewport">
             <p>
-                You have connected, and developed a friendship/small group of friends with other marginalized students and mentors.
-                You feel relief, trust, although you have a little cautious optimism. You introduce/get introduced to velivada circle.
-                Relationship system begins - you get mental health boost.
+                You have withdrawn, keeping to yourself, avoiding interactions beyond necessity. 
+                Attempts to connect have felt disheartening, or you chose silence over the risk of being misunderstood. 
+                You feel adrift, tired, uncertain. your trust in others is brittle. 
+                You sit alone in the library or skip the mess.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton id="pressure-btn" text="Rising pressure" className="hover:bg-gray-800"/></li>
+                <li><BasicButton href="/rising-pressure" id="pressure-btn" text="Rising pressure" className="hover:bg-gray-800"/></li>
                 <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
