@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 export function gateOpen(): Promise<void> {
     return new Promise((resolve) => {
       let completed = 0;

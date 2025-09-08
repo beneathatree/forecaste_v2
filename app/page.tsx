@@ -12,13 +12,17 @@ import Human from "./components/svg/human";
 import { gateOpen } from "./components/functions/gateOpen";
 import { resetGame } from "./components/functions/resetGame";
 import BasicButton from "./components/functions/basicButton";
-
-//gsap animation on click of #start-btn:
-const startGame = () => {
-  gateOpen()
-}
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const startGame = async () => {
+    
+    await gateOpen();
+    router.push("/adjustment");
+  };
+
   return (
     <>
     <Head>
