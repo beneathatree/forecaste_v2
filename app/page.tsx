@@ -45,16 +45,19 @@ export default function Home() {
       <div 
         className="z-[30] h-[650px] w-full flex items-center justify-center relative"
         id="viewport">
-        <button 
-          className="z-30 font-sans text-lg pt-1 pr-2 pl-2 bg-black text-white rounded-md"
-          id="start-btn" 
-          onClick={startGame}>Start!
-        </button>
-        <button 
-          className="z-30 font-sans text-lg pt-1 pr-2 pl-2 bg-black text-white rounded-md"
-          id="start-btn" 
-          onClick={resetGame}>Reset
-        </button>
+        <div id="buttonContainer"
+          className="flex flex-row gap-3">
+          <button 
+            className="z-30 font-sans text-lg pt-1 pb-1 pr-2 pl-2 bg-black text-white rounded-md"
+            id="start-btn" 
+            onClick={startGame}>Start!
+          </button>
+          <button 
+            className="z-30 font-sans text-lg pt-1 pb -1 pr-2 pl-2 bg-black text-white rounded-md"
+            id="start-btn" 
+            onClick={resetGame}>Reset
+          </button>
+        </div>
       </div>
     </div>
     </>
