@@ -1,21 +1,27 @@
-"use client"
+export function gateOpen(): Promise<void> {
+    return new Promise((resolve) => {
+      let completed = 0;
+      const done = () => {
+        completed += 1;
+        if (completed === 2) resolve();
+      };
 
-import { gsap } from "gsap";
+      gsap.to("#leftGate", {
+        duration: 1.2,
+        scaleX: 0.1,
+        skewY: -20,
+        opacity: 0.4,
+        ease: "power2.out",
+        onComplete: done,
+      });
 
-export function gateOpen() {
-    gsap.to("#leftGate", {
-      duration: 1.2,
-      scaleX: 0.1,
-      skewY: -20,
-      opacity: 0.4,
-      ease: "power2.out",
-    })
-
-    gsap.to("#rightGate", {
-      duration: 1.2,
-      scaleX: 0.1,
-      skewY: 20,
-      opacity: 0.4,
-      ease: "power2.out",
-    })
+      gsap.to("#rightGate", {
+        duration: 1.2,
+        scaleX: 0.1,
+        skewY: 20,
+        opacity: 0.4,
+        ease: "power2.out",
+        onComplete: done,
+      });
+    });
 }
