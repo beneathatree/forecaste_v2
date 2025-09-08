@@ -10,6 +10,7 @@ import LeftGate from "./components/svg/leftGate";
 import RightGate from "./components/svg/rightGate";
 import Human from "./components/svg/human";
 import { gateOpen } from "./components/functions/gateOpen";
+import { resetGame } from "./components/functions/resetGame";
 
 //gsap animation on click of #start-btn:
 const startGame = () => {
@@ -48,6 +49,11 @@ export default function Home() {
           className="z-30 font-sans text-lg pt-1 pr-2 pl-2 bg-black text-white rounded-md"
           id="start-btn" 
           onClick={startGame}>Start!
+        </button>
+        <button 
+          className="z-30 font-sans text-lg pt-1 pr-2 pl-2 bg-black text-white rounded-md"
+          id="start-btn" 
+          onClick={resetGame}>Reset
         </button>
       </div>
     </div>
