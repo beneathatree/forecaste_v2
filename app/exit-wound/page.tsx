@@ -22,10 +22,9 @@ export default function Home() {
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="viewport">
             <p>
-                The semester ends.
-                The protests fade.
-                The slur on the wall is long gone, painted over. But you remember it everytime you walk past that wall in the hostel.
-                Your story hasn't made the news. no documentary crews. No hashtags.
+                You pack quietly. You leave before the summer ends. 
+                You write no letters. You give no speeches. But your blog shows everything.
+                The game ends not in defeat, but in departure.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
                 <li><BasicButton href="/organize-and-mobilize" id="organize-mobilize-btn" text="Organize and mobilize." className="hover:bg-gray-800"/></li>
