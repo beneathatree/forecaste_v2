@@ -22,8 +22,8 @@ export default function Home() {
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="viewport">
             <p>
-                The admin has called a meeting. A circular goes out calling your protest 'unautorized activity.' Some mentors warn you for you being watched, and to be careful.
-                Your scholarship goes 'under review' for unknown reasons. Vut the velivada circle anyway has grown louder, stronger. 
+                The admin has called a meeting. A circular goes out calling your protest unautorized activity. Some mentors warn you for you being watched, and to be careful.
+                Your scholarship goes under review for unknown reasons. Vut the velivada circle anyway has grown louder, stronger. 
                 The hostel repainted, the walls are new too. The professor still teaches - still says things that twist in your gut. No one brings up what happened. Not even you.
                 One night, you overhear someone talking about 'that reservation kid who overreacted on an anonymous blog'. Your name isn't said.
                 You get your grades back. Decent but hollow. You haven't interacted with any new people. You stopped writing blogs.
