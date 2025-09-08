@@ -2,6 +2,7 @@
 
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
+import Link from "next/link";
 
 export default function Home() {
   return (
