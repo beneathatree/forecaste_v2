@@ -2,7 +2,7 @@
 
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
-import Link from "next/link";
+//import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         id="viewport">
             <p>
                 You are also in confusion and are going through a lot of cultural shocks. 
-                You've been facing microaggressions, othering and subtle casteism. 
+                You have been facing microaggressions, othering and subtle casteism. 
                 What do you do? 
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
