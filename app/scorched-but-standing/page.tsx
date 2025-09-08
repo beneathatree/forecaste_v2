@@ -22,9 +22,9 @@ export default function Home() {
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="viewport">
             <p>
-                You pack quietly. You leave before the summer ends. 
-                You write no letters. You give no speeches. But your blog shows everything.
-                The game ends not in defeat, but in departure.
+                You walk across the stage at convocation. No claps. 
+                No proud family photo. Just the quiet ache of survival.
+                You leave people who learned to speak becausse you once did.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
                 <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
