@@ -43,7 +43,7 @@ export default function Home() {
         <Human className="absolute z-20 bottom-0 right-[152.923px] left-[120px]"/>
       </div>
       <div 
-        className="z-[30] h-[650px] w-full flex items-center justify-center relative"
+        className="z-[30] h-[650px] w-full flex items-end justify-center relative"
         id="viewport">
         <div id="buttonContainer"
           className="flex flex-row gap-3">
