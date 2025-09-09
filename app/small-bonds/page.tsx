@@ -23,7 +23,7 @@ export default function Home() {
         id="viewport">
             <p>
                 You have connected, and developed a friendship/small group of friends with other marginalized students and mentors.
-                You feel relief, trust, although you have a little cautious optimism. You introduce/get introduced to velivada circle.
+                You feel relief, trust, although you have a little cautious optimism. You get introduced to velivada circle.
                 Relationship system begins - you get mental health boost.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">

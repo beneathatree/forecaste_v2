@@ -23,9 +23,9 @@ export default function Home() {
         id="viewport">
             <p>
                 A few days later, a momment says,
-                "Thank you for Writing this. I've been holding this in for so long."
+                &quot;Thank you for Writing this. I've been holding this in for so long.&quot;
                 Another message says
-                "Do you want to join our reading circle?"
+                &quot;Do you want to join our reading circle?&quot;
                 You feel a shift. Not loud, but real. Someone sees you. 
                 Someone has been there too. You sit with this feeling: not just rage now, but recognition.
             </p>

@@ -24,12 +24,12 @@ export default function Home() {
             <p>
                 You stand in a packed room. some are seated on the floor. Others leaning on walls. The air is thick with frustration, grief and resolve.
                 A senior from the Velivada Circle says:
-                "They want us divided and afraid. So what do we do next?"
+                &quot;They want us divided and afraid. So what do we do next?&quot;
                 some responses are:
-                "Sit-in outside the admin block."
-                "Compromise, call for testimony."
-                "Open reading circle event, in public and without permission."
-                "Art installation with names"
+                &quot;Sit-in outside the admin block.&quot;
+                &quot;Compromise, call for testimony.&quot;
+                &quot;Open reading circle event, in public and without permission.&quot;
+                &quot;Art installation with names&quot;
                 You realize you are no longer just a part, or a trigger.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">

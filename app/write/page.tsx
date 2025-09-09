@@ -25,8 +25,8 @@ export default function Home() {
                 You open a text document, and draft a blog post. Now, the words don't seem to be frozen.
                 You write about shame. About silence. How you're missing home. And how this is not new. How exhausted you feel pretending it doesn't hurt.
                 You post anonymously. It receives one like. And then two more. Acouple of comments.
-                "This is important, please read."
-                "Another crybaby."
+                &quot;This is important, please read.&quot;
+                &quot;Another crybaby.&quot;
                 You feel seen, but not entirely safe.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">

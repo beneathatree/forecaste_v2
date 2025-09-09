@@ -23,7 +23,8 @@ export default function Home() {
         id="viewport">
             <p>
                 You decline the invitation to speak, instead you write something quietly, and publish on your anonymous blog.
-                You cook with your friends. You laugh again - you walk past the admin building, it no longer feels like a fortress. You didn't change the system. But just your story.
+                You cook with your friends. You laugh again - you walk past the admin building, it no longer feels like a fortress. 
+                You didn't change the system. But just your story.
                 That's not a small thing.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">

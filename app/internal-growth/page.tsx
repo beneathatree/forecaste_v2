@@ -23,7 +23,7 @@ export default function Home() {
         id="viewport">
             <p>
                 Your body is tired. But one day you pick up a book you left halfway. 
-                Another day, you respond to that ubread message. 
+                Another day, you respond to that unread message. 
                 You start writing poetry again.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">

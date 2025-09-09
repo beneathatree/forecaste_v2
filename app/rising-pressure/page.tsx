@@ -24,7 +24,7 @@ export default function Home() {
             <p>
                 Deadlines loom. Syllabus piles up. 
                 The Classroom feels colder now. You participate less in classes, your questions hang unasked. 
-                You're pushing through late nights, but the gaps in guidance and belonging weigh you down. 
+                You&#39;re pushing through late nights, but the gaps in guidance and belonging weigh you down. 
                 You try to keep up, but it feels like running uphill.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">

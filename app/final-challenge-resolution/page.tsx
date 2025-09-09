@@ -25,7 +25,7 @@ export default function Home() {
                 The semester ends.
                 The protests fade.
                 The slur on the wall is long gone, painted over. But you remember it everytime you walk past that wall in the hostel.
-                Your story hasn't made the news. no documentary crews. No hashtags.
+                Your story hasn&#39;t made the news. no documentary crews. No hashtags.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
                 <li><BasicButton href="/organize-and-mobilize" id="organize-mobilize-btn" text="Organize and mobilize." className="hover:bg-gray-800"/></li>

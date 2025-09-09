@@ -25,8 +25,8 @@ export default function Home() {
                 The admin has called a meeting. A circular goes out calling your protest unautorized activity. Some mentors warn you for you being watched, and to be careful.
                 Your scholarship goes under review for unknown reasons. Vut the velivada circle anyway has grown louder, stronger. 
                 The hostel repainted, the walls are new too. The professor still teaches - still says things that twist in your gut. No one brings up what happened. Not even you.
-                One night, you overhear someone talking about 'that reservation kid who overreacted on an anonymous blog'. Your name isn't said.
-                You get your grades back. Decent but hollow. You haven't interacted with any new people. You stopped writing blogs.
+                One night, you overhear someone talking about &#39;that reservation kid who overreacted&#39; on an anonymous blog. Your name isn't said.
+                You get your grades back. Decent but hollow. You haven&#39;t interacted with any new people. You stopped writing blogs.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
                 <li><BasicButton href="/internal-growth" id="growth-btn" text="Internal growth." className="hover:bg-gray-800"/></li>

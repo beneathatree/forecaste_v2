@@ -23,8 +23,8 @@ export default function Home() {
         id="viewport">
             <p>
                 You take a breath and a walk. And then - you text velivada circle.
-                By evening,you're in a crowded room of voices : some are trembling,some are raging strongly. 
-                One of the student shouts 'Enough is Enough'.
+                By evening, you&#39;re in a crowded room of voices: some are trembling,some are raging strongly. 
+                One of the student shouts &#39;Enough is Enough.&#39;
                 A Statement is drafted.Social media Campaign is started. 
                 You are very scared. But you are not alone.
             </p>

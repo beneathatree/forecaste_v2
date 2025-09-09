@@ -23,7 +23,7 @@ export default function Home() {
         id="viewport">
             <p>
                 You return to class, sleep deprived, half prepared, holding together the pieces. The professor casually remarks -
-                "The culture here is already polluted now. The cost we keep paying for negotiating with merit."
+                &quot;The culture here is already polluted now. The cost we keep paying for negotiating with merit.&quot;
                 People laugh. Applause happens. Some look away. You freeze. The sentence pierces more than it surprises.
                 Later, on the hostel wall, someone scribbles a slur. You recognise the target - your roll number. No one speaks of it the next day.
             </p>
