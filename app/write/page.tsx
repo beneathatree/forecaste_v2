@@ -22,8 +22,8 @@ export default function Home() {
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="viewport">
             <p>
-                You open a text document, and draft a blog post. Now, the words don't seem to be frozen.
-                You write about shame. About silence. How you're missing home. And how this is not new. How exhausted you feel pretending it doesn't hurt.
+                You open a text document, and draft a blog post. Now, the words don&#39;t seem to be frozen.
+                You write about shame. About silence. How you&#39;re missing home. And how this is not new. How exhausted you feel pretending it doesn&#39;t hurt.
                 You post anonymously. It receives one like. And then two more. Acouple of comments.
                 &quot;This is important, please read.&quot;
                 &quot;Another crybaby.&quot;

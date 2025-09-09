@@ -23,7 +23,7 @@ export default function Home() {
         id="viewport">
             <p>
                 A few days later, a momment says,
-                &quot;Thank you for Writing this. I've been holding this in for so long.&quot;
+                &quot;Thank you for Writing this. I&#39;ve been holding this in for so long.&quot;
                 Another message says
                 &quot;Do you want to join our reading circle?&quot;
                 You feel a shift. Not loud, but real. Someone sees you. 
