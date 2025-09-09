@@ -2,9 +2,17 @@
 
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
-//import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const router = useRouter();
+
+  function handleCoinFlip() {
+    const result = Math.random() > 0.5;
+    router.push(result ? "/isolate" : "/small-bonds");
+  }
+
   return (
     <>
     <div 
@@ -29,7 +37,7 @@ export default function Home() {
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
                 <li><BasicButton href="/isolate" id="isolate-btn" text="Isolate yourselves." className="hover:bg-gray-800"/></li>
                 <li><BasicButton href="/small-bonds" id="smallBonds-btn" text="Form small bonds." className="hover:bg-gray-800"/></li>
-                <li><BasicButton id="coin-btn" text="Flip a coin." className="hover:bg-gray-800"/></li>
+                <li><BasicButton onClick={handleCoinFlip} id="coin-btn" text="Flip a coin." className="hover:bg-gray-800"/></li>
                 <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
