@@ -37,7 +37,7 @@ export default function Home() {
         className="font-sans text-blue-500">forecaste</h1>
       <div 
         id="gameContainer" 
-        className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden">
+        className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
         <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
         <College className="absolute top-[280.654px] left-[82.166px] right-[83.952px]"/>
         <LeftWall className="absolute top-[-2px] left-[-2px] z-10"/>
