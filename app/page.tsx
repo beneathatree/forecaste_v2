@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <div 
         className="z-[30] h-full w-full flex items-end pb-3 justify-center relative"
-        id="buttons-and-interactivity">
+        id="buttons-text-and-interactivity">
         <div id="buttonContainer"
           className="flex flex-row gap-3">
           <BasicButton id="start-btn" text="Start!" onClick={startGame} className="hover:bg-gray-800"/>
