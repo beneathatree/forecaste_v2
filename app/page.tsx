@@ -23,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <div id="game-container" className="w-full h-[650px]">
+    <>
       <div 
         id="graphics-text-and-animations" 
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
@@ -45,6 +45,6 @@ export default function Home() {
           <BasicButton id="reset-btn" text="Reset" onClick={resetGame} className="hover:bg-red-500"/>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -21,7 +21,7 @@ export default function RootLayout({
             id="title"
             className="font-sans text-blue-500">forecaste
           </h1>
-          <div id="game-container">
+          <div id="game-container" className="w-full h-[650px]">
             {children}
           </div>
         </div>
