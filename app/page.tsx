@@ -1,6 +1,5 @@
 "use client"
 
-import Head from "next/head";
 import Clouds from "./components/svg/clouds";
 import College from "./components/svg/college";
 import LeftWall from "./components/svg/leftWall";
@@ -24,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <div id="game-container">
+    <div id="game-container" className="w-full h-[650px]">
       <div 
         id="graphics-text-and-animations" 
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
@@ -38,7 +37,7 @@ export default function Home() {
         <Human className="absolute z-20 bottom-0 right-[152.923px] left-[120px]"/>
       </div>
       <div 
-        className="z-[30] h-[650px] w-full flex items-end pb-3 justify-center relative"
+        className="z-[30] h-full w-full flex items-end pb-3 justify-center relative"
         id="buttons-and-interactivity">
         <div id="buttonContainer"
           className="flex flex-row gap-3">
