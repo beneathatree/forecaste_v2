@@ -11,7 +11,7 @@ type Props = {
   & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 const BasicButton = ({ text = "", className = "", href, ...props }: Props) => {
-	const buttonStyling = `z-30 font-sans text-lg pt-1 pb-1 pr-2 pl-2 bg-black text-white rounded-md transition-all duration-200 ${className}`;
+	const buttonStyling = `z-30 font-sans text-lg pt-1 pb-1 pr-2 pl-2 bg-black text-white rounded-md transition-all duration-200 hover:bg-gray-600 ${className}`;
 
     if (href) {
         return (
