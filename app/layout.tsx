@@ -1,5 +1,11 @@
 import "./globals.css";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'forecaste',
+  description: 'Your app description',
+  viewport: 'width=device-width, initial-scale=1.0',
+}
 
 export default function RootLayout({
   children,
@@ -8,11 +14,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <title>forecaste</title>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      </Head>
       <body>
         <div 
           id="app" 
