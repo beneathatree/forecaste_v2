@@ -10,10 +10,14 @@ export default function Home() {
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
       </div>
       <div 
-        className="z-[30] h-full w-full flex items-end pb-3 justify-center relative"
+        className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="buttons-text-and-interactivity">
-        <div id="buttonContainer"
-          className="flex flex-row gap-3">
+          <p>
+          You have just arrived at a new premier institution. 
+          You are proud of your achievements, are also in awe of your surroundings and your peers. 
+          </p>
+        <div id="possible-actions"
+          className="flex flex-row w-full justify-center">
           <BasicButton text="Start!" href="/placeholding"/>
         </div>
       </div>

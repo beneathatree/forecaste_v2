@@ -21,7 +21,7 @@ export default function Home() {
             <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
       </div>
       <div 
-        className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
+        className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="buttons-text-and-interactivity">
             <p>
                 You are also in confusion and are going through a lot of cultural shocks. 
