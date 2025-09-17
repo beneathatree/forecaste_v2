@@ -18,7 +18,7 @@ export default function Home() {
           </p>
         <div id="possible-actions"
           className="flex flex-row w-full justify-center">
-          <BasicButton text="Start!" href="/placeholding"/>
+          <BasicButton text="Start!" href="/adjustment"/>
         </div>
       </div>
     </>
