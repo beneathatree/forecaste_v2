@@ -1,47 +1,20 @@
 "use client"
 
-import Clouds from "./components/svg/clouds";
-import College from "./components/svg/college";
-import LeftWall from "./components/svg/leftWall";
-import RightWall from "./components/svg/rightWall";
-import Floor from "./components/svg/floor";
-import LeftGate from "./components/svg/leftGate";
-import RightGate from "./components/svg/rightGate";
-import Human from "./components/svg/human";
-import { gateOpen } from "./components/functions/gateOpen";
-import { resetGame } from "./components/functions/resetGame";
 import BasicButton from "./components/functions/basicButton";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
-
-  const startGame = async () => {
-    await gateOpen();
-    router.push("/adjustment");
-  };
-
   return (
     <>
       <div 
         id="graphics-text-and-animations" 
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
-        <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
-        <College className="absolute top-[280.654px] left-[82.166px] right-[83.952px]"/>
-        <LeftWall className="absolute top-[-2px] left-[-2px] z-10"/>
-        <RightWall className="absolute top-[-2px] right-[-2px] z-10"/>
-        <Floor className="absolute bottom-[-10px] left-[-5%]"/>
-        <LeftGate className="absolute left-[65.910px] top-[55.317px] origin-bottom-left"/>
-        <RightGate className="absolute top-[55.317px] right-[70.726px] origin-bottom-right"/>
-        <Human className="absolute z-20 bottom-0 right-[152.923px] left-[120px]"/>
       </div>
       <div 
         className="z-[30] h-full w-full flex items-end pb-3 justify-center relative"
         id="buttons-text-and-interactivity">
         <div id="buttonContainer"
           className="flex flex-row gap-3">
-          <BasicButton id="start-btn" text="Start!" onClick={startGame} className="hover:bg-gray-800"/>
-          <BasicButton id="reset-btn" text="Reset" onClick={resetGame} className="hover:bg-red-500"/>
+          <BasicButton text="Start!" href="/placeholding"/>
         </div>
       </div>
     </>
