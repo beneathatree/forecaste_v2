@@ -25,7 +25,6 @@ export default function Home() {
                 <li><BasicButton href="/organize-and-mobilize" id="organize-mobilize-btn" text="Organize and mobilize." className="hover:bg-gray-800"/></li>
                 <li><BasicButton href="/exit-wound" id="exit-wound-btn" text="Exit wound." className="hover:bg-gray-800"/></li>
                 <li><BasicButton href="/scorched-but-standing" id="oscorched-standing-btn" text="Scorched but standing." className="hover:bg-gray-800"/></li>
-                <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
     </>

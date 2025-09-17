@@ -32,7 +32,6 @@ export default function Home() {
                 <li><BasicButton href="/isolate" id="isolate-btn" text="Isolate yourselves." className="hover:bg-gray-800"/></li>
                 <li><BasicButton href="/small-bonds" id="smallBonds-btn" text="Form small bonds." className="hover:bg-gray-800"/></li>
                 <li><BasicButton onClick={handleCoinFlip} id="coin-btn" text="Flip a coin." className="hover:bg-gray-600"/></li>
-                <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
     </>

@@ -41,7 +41,6 @@ export default function Home() {
         <div id="buttonContainer"
           className="flex flex-row gap-3">
           <BasicButton id="start-btn" text="Start!" onClick={startGame} className="hover:bg-gray-800"/>
-          <BasicButton id="reset-btn" text="Reset" onClick={resetGame} className="hover:bg-red-500"/>
         </div>
       </div>
     </>

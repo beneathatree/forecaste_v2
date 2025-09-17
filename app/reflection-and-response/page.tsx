@@ -25,7 +25,6 @@ export default function Home() {
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
                 <li><BasicButton href="/mobilization" id="mobilize-btn" text="Mobilize." className="hover:bg-gray-800"/></li>
-                <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
     </>

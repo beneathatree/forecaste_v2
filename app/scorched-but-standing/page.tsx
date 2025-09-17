@@ -21,7 +21,6 @@ export default function Home() {
                 You leave people who learned to speak becausse you once did.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/></li>
             </ul>
       </div>
     </>
