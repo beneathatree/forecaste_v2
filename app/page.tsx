@@ -17,7 +17,6 @@ export default function Home() {
   const router = useRouter();
 
   const startGame = async () => {
-    
     await gateOpen();
     router.push("/adjustment");
   };
