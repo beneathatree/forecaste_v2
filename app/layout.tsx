@@ -1,6 +1,6 @@
-import BasicButton from "./components/functions/basicButton";
 import "./globals.css";
 import { Metadata } from "next";
+import BasicButton from "./components/functions/basicButton";
 
 export const metadata: Metadata = {
   title: 'forecaste',
