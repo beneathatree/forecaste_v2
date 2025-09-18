@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/howler": "^2.2.12",
     "gsap": "^3.13.0",
+    "howler": "^2.2.4",
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
