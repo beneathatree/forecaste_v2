@@ -1,11 +1,15 @@
 import "./globals.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import BasicButton from "./components/functions/basicButton";
 
 export const metadata: Metadata = {
   title: 'forecaste',
   description: 'Your app description',
-  viewport: 'width=device-width, initial-scale=1.0',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
 }
 
 export default function RootLayout({
