@@ -34,7 +34,10 @@ export default function RootLayout({
             {children}
           </div>
         </div>
-        <BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/>
+        <div className="flex gap-2">
+          <BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/>
+
+        </div>
       </body>
     </html>
   );
