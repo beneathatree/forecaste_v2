@@ -2,33 +2,40 @@
 
 import { usePathname } from 'next/navigation';
 import { useAudio } from '../hooks/useAudio';
-import { useMemo } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import BasicButton from './basicButton';
 
 export default function AudioManager() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
 
-  // Change audio source based on route
   const audioSrc = useMemo(() => {
     switch (pathname) {
       case '/':
-        return '/audio/home.mp3';
-      case '/about':
-        return '/audio/about.mp3';
-      case '/contact':
-        return '/audio/contact.mp3';
+        return '/sounds/british-woods-ambient-noise-24942.mp3';
+      case '/adjustment':
+        return '/sounds/crowd-noise-375725.mp3';
       default:
-        return '/audio/default.mp3';
+        return '/sounds/british-woods-ambient-noise-24942.mp3';
     }
   }, [pathname]);
 
   const { isPlaying, togglePlayPause } = useAudio(audioSrc);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Use a consistent className during SSR and initial hydration
+  const buttonClassName = isClient 
+    ? `${isPlaying ? 'hover:bg-red-500' : 'hover:bg-green-500'}`
+    : 'hover:bg-green-500'; // Default to green during SSR
+
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <BasicButton
         onClick={togglePlayPause}
-        className={`${isPlaying ? 'bg-red-500' : 'bg-green-500'}`}
+        className={buttonClassName}
         text={isPlaying ? 'Pause' : 'Play'}
       />
     </div>

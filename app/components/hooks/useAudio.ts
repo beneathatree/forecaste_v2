@@ -13,22 +13,28 @@ export function useAudio(audioSrc: string) {
       audioRef.current = new Audio(audioSrc);
     }
 
-    audioRef.current.play().then(() => setIsPlaying(true)).catch(console.error);
+    // Don't auto-play - wait for user interaction
+    // audioRef.current.play().then(() => setIsPlaying(true)).catch(console.error);
 
     return () => {
       audioRef.current?.pause();
     };
   }, [audioSrc]);
 
-  const togglePlayPause = () => {
+  const togglePlayPause = async () => {
     if (!audioRef.current) return;
 
-    if (audioRef.current.paused) {
-      audioRef.current.play();
-      setIsPlaying(true);
-    } else {
-      audioRef.current.pause();
-      setIsPlaying(false);
+    try {
+      if (audioRef.current.paused) {
+        await audioRef.current.play();
+        setIsPlaying(true);
+      } else {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    } catch (error) {
+      console.error('Audio playback failed:', error);
+      // If play fails, we can show a message to the user or handle it gracefully
     }
   };
 

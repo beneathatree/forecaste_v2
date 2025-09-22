@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Metadata, Viewport } from "next";
 import BasicButton from "./components/functions/basicButton";
+import AudioManager from "./components/functions/audioManager";
 
 export const metadata: Metadata = {
   title: 'forecaste',
@@ -36,6 +37,7 @@ export default function RootLayout({
         </div>
         <div className="flex gap-2">
           <BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/>
+          <AudioManager />
         </div>
       </body>
     </html>
