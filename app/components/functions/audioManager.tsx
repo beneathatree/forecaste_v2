@@ -32,12 +32,10 @@ export default function AudioManager() {
     : 'hover:bg-green-500'; // Default to green during SSR
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
       <BasicButton
         onClick={togglePlayPause}
         className={buttonClassName}
         text={isPlaying ? 'Pause' : 'Play'}
       />
-    </div>
   );
 }
