@@ -20,7 +20,7 @@ export default function Home() {
         id="buttons-text-and-interactivity">
           {fromSmallBonds && (
               <p className="mb-3">
-                <strong>You tried to form small bonds, but fate had other plans.</strong>
+                <strong>You tried to form small bonds, but fate had other plans. Your attempts to form bonds did not work out well.</strong>
               </p>
             )}
             <p>
