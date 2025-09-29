@@ -2,9 +2,18 @@
 
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
-//import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleChoice = (choice: string) => {
+    // Store the choice in localStorage
+    localStorage.setItem('incitingIncidentChoice', choice);
+    // Navigate to the appropriate page
+    router.push(`/${choice}`);
+  };
+
   return (
     <>
       <div 
@@ -22,9 +31,9 @@ export default function Home() {
                 Later, on the hostel wall, someone scribbles a slur. You recognise the target - your roll number. No one speaks of it the next day.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton href="/withdraw" id="withdraw-btn" text="Withdraw." className="hover:bg-gray-800"/></li>
-                <li><BasicButton href="/organize" id="organize-btn" text="Organize." className="hover:bg-gray-800"/></li>
-                <li><BasicButton href="/write" id="write-btn" text="Write." className="hover:bg-gray-800"/></li>
+                <li><BasicButton onClick={() => handleChoice('withdraw')} id="withdraw-btn" text="Withdraw." className="hover:bg-gray-800"/></li>
+                <li><BasicButton onClick={() => handleChoice('organize')} id="organize-btn" text="Organize." className="hover:bg-gray-800"/></li>
+                <li><BasicButton onClick={() => handleChoice('write')} id="write-btn" text="Write." className="hover:bg-gray-800"/></li>
             </ul>
       </div>
     </>

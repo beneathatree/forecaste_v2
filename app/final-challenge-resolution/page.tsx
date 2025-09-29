@@ -2,9 +2,43 @@
 
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
-//import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [choice, setChoice] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Get the choice from localStorage
+    const storedChoice = localStorage.getItem('incitingIncidentChoice');
+    setChoice(storedChoice);
+  }, []);
+
+  const renderButtons = () => {
+    switch (choice) {
+      case 'withdraw':
+        return (
+          <li><BasicButton href="/exit-wound" id="exit-wound-btn" text="Exit wound." className="hover:bg-gray-800"/></li>
+        );
+      case 'organize':
+        return (
+          <li><BasicButton href="/velivada-circle" id="velivada-circle-btn" text="Velivada circle." className="hover:bg-gray-800"/></li>
+        );
+      case 'write':
+        return (
+          <li><BasicButton href="/scorched-but-standing" id="scorched-standing-btn" text="Scorched but standing." className="hover:bg-gray-800"/></li>
+        );
+      default:
+        // Fallback to show all buttons if no choice is stored
+        return (
+          <>
+            <li><BasicButton href="/organize-and-mobilize" id="organize-mobilize-btn" text="Organize and mobilize." className="hover:bg-gray-800"/></li>
+            <li><BasicButton href="/exit-wound" id="exit-wound-btn" text="Exit wound." className="hover:bg-gray-800"/></li>
+            <li><BasicButton href="/scorched-but-standing" id="scorched-standing-btn" text="Scorched but standing." className="hover:bg-gray-800"/></li>
+          </>
+        );
+    }
+  };
+
   return (
     <>
       <div 
@@ -22,9 +56,7 @@ export default function Home() {
                 Your story hasn&#39;t made the news. no documentary crews. No hashtags.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton href="/organize-and-mobilize" id="organize-mobilize-btn" text="Organize and mobilize." className="hover:bg-gray-800"/></li>
-                <li><BasicButton href="/exit-wound" id="exit-wound-btn" text="Exit wound." className="hover:bg-gray-800"/></li>
-                <li><BasicButton href="/scorched-but-standing" id="oscorched-standing-btn" text="Scorched but standing." className="hover:bg-gray-800"/></li>
+                {renderButtons()}
             </ul>
       </div>
     </>
