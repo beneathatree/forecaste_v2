@@ -10,7 +10,11 @@ export default function Home() {
 
   function handleCoinFlip() {
     const result = Math.random() > 0.6;
-    router.push(result ? "/isolate" : "/small-bonds");
+    if (result) {
+      router.push("/isolate?from=small-bonds");
+    } else {
+      router.push("/small-bonds");
+    }
   }
 
   return (
