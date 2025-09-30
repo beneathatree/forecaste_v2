@@ -1,10 +1,11 @@
 "use client"
 
+import React, { Suspense } from "react";
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
 import { useSearchParams } from "next/navigation";
 
-export default function Home() {
+function IsolatePage() {
   const searchParams = useSearchParams();
   const fromSmallBonds = searchParams.get('from') === 'small-bonds';
 
@@ -13,7 +14,7 @@ export default function Home() {
       <div 
         id="graphics-text-and-animations" 
         className="absolute top-0 right-0 left-0 overflow-hidden">
-            <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
+          <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
       </div>
       <div 
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
@@ -35,5 +36,13 @@ export default function Home() {
             </ul>
       </div>
     </>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <IsolatePage />
+    </Suspense>
   );
 }

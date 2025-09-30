@@ -2,6 +2,7 @@ import "./globals.css";
 import { Metadata, Viewport } from "next";
 import BasicButton from "./components/functions/basicButton";
 import AudioManager from "./components/functions/audioManager";
+import React, { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: 'forecaste',
@@ -32,12 +33,16 @@ export default function RootLayout({
           <div 
           id="game-container" 
           className="w-full h-[650px] flex flex-col items-center justify-center">
-            {children}
+            <Suspense fallback={null}>
+              {children}
+            </Suspense>
           </div>
         </div>
         <div className="flex gap-2">
           <BasicButton href="/" id="reset-btn" text="Reset Game" className="hover:bg-red-500"/>
-          <AudioManager />
+          <Suspense fallback={null}>
+            <AudioManager />
+          </Suspense>
         </div>
       </body>
     </html>
