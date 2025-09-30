@@ -21,7 +21,7 @@ export default function Home() {
                 The game ends not in defeat, but in departure.
             </p>
             <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-              The game ends here, the journey does not. If you'd lke to play again,
+              The game ends here, the journey does not. If you&apos;d lke to play again,
               <BasicButton href="/" id="reset-btn" text="Start Over" className="hover:bg-green-600"/>
             </ul>
       </div>
