@@ -1,6 +1,7 @@
 "use client"
 
 import BasicButton from "./components/functions/basicButton";
+import Dropdown from "./components/functions/dropdown";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <div 
         id="graphics-text-and-animations" 
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
+          <Dropdown/>
       </div>
       <div 
         className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-center relative p-5"

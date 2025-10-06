@@ -26,10 +26,9 @@ export default function AudioManager() {
     setIsClient(true);
   }, []);
 
-  // Use a consistent className during SSR and initial hydration
   const buttonClassName = isClient 
     ? `${isPlaying ? 'hover:bg-red-500' : 'hover:bg-green-500'}`
-    : 'hover:bg-green-500'; // Default to green during SSR
+    : 'hover:bg-green-500';
 
   return (
       <BasicButton

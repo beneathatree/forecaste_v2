@@ -3,6 +3,12 @@ import { Metadata, Viewport } from "next";
 import BasicButton from "./components/functions/basicButton";
 import AudioManager from "./components/functions/audioManager";
 import React, { Suspense } from "react";
+import { Special_Elite } from 'next/font/google'
+
+const primaryFont = Special_Elite({
+  weight: '400',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: 'forecaste',
@@ -27,12 +33,12 @@ export default function RootLayout({
           className="w-[400px] flex relative justify-center items-center flex-col bg-white border border-black">
           <h1 
             id="title"
-            className="font-sans text-blue-500 pt-4">
+            className={`${primaryFont.className} font-sans text-blue-500 pt-4`}>
             forecaste
           </h1>
           <div 
           id="game-container" 
-          className="w-full h-[650px] flex flex-col items-center justify-center">
+          className={`${primaryFont.className} w-full h-[650px] flex flex-col items-center justify-center`}>
             <Suspense fallback={null}>
               {children}
             </Suspense>
