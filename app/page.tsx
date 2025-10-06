@@ -2,6 +2,7 @@
 
 import BasicButton from "./components/functions/basicButton";
 import Dropdown from "./components/functions/dropdown";
+import People from "./components/svg/v2/people";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         id="graphics-text-and-animations" 
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
           <Dropdown/>
+          <People className="absolute bottom-[35px] right-[117px]"/>
       </div>
       <div 
         className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-center relative p-5"

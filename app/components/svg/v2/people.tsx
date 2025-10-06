@@ -1,6 +1,10 @@
 import React from "react";
 
-const People = ({id="people_in_college", className="", width="153", }) => (
+const People = ({
+  id = "people_in_college",
+  className = "",
+  width = "190",
+}) => (
   <svg
     width={width}
     id={id}

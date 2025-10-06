@@ -33,7 +33,7 @@ export default function RootLayout({
           className="w-[400px] flex relative justify-center items-center flex-col bg-white border border-black">
           <h1 
             id="title"
-            className={`${primaryFont.className} font-sans text-blue-500 pt-4`}>
+            className={`${primaryFont.className} text-lg text-blue-500 pt-4`}>
             forecaste
           </h1>
           <div 
