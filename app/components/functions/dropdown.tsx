@@ -19,11 +19,11 @@ const Dropdown = () => {
         <button
           onClick={toggleDropdown}
           className={`inline-flex justify-center w-full rounded-md
-                        shadow-sm px-4 pb-2 pt-3 bg-white 
+                        shadow-sm px-4 pb-2 pt-3 bg-white border
                         text-xs ${
                           isOpen
-                            ? "hover:bg-blue-50 text-blue-500 border border-blue-500"
-                            : "hover:bg-gray-50 text-gray-700 border border-gray-700"
+                            ? "hover:bg-blue-50 text-blue-500 border-blue-500"
+                            : "hover:bg-gray-50 text-gray-700 border-gray-700"
                         }`}
         >
           Indicators
@@ -47,7 +47,7 @@ const Dropdown = () => {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 w-56 
+          className="origin-top-right absolute right-0 mt-2 w-30 
                     rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5
                     focus:outline-none"
           role="menu"
