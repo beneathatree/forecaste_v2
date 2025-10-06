@@ -4,6 +4,7 @@ import BasicButton from "./components/functions/basicButton";
 import Dropdown from "./components/functions/dropdown";
 import People from "./components/svg/v2/people";
 import College from "./components/svg/v2/college";
+import Ground from "./components/svg/v2/ground";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
         id="graphics-text-and-animations" 
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden ">
           <Dropdown/>
-          <People className="absolute bottom-[35px] right-[117px] z-10"/>
-          <College className="absolute left-0 right-0 bottom-[220px] z-0"/>
+          <People className="absolute bottom-[35px] right-[117px] z-20"/>
+          <College className="absolute left-0 right-0 bottom-[220px] z-10"/>
+          <Ground className="absolute bottom-0 z-0"/>
       </div>
       <div 
         className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"

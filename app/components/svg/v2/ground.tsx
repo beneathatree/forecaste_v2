@@ -1,6 +1,6 @@
 import React from "react";
 
-const Ground = ({id="floor", width="600", className=""}) => {
+const Ground = ({id="floor", width="800", className=""}) => {
     return(
         <svg id={id} width={width} className={className}
           xmlns="http://www.w3.org/2000/svg"
