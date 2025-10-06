@@ -1,7 +1,7 @@
 "use client";
 
 import BasicButton from "../components/functions/basicButton";
-import Clouds from "../components/svg/clouds";
+import Clouds from "../components/svg/unused/clouds";
 import { useRouter } from "next/navigation";
 import Dropdown from "../components/functions/dropdown";
 

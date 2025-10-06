@@ -1,13 +1,13 @@
 "use client"
 
-import Clouds from "../components/svg/clouds";
-import College from "../components/svg/college";
-import LeftWall from "../components/svg/leftWall";
-import RightWall from "../components/svg/rightWall";
-import Floor from "../components/svg/floor";
-import LeftGate from "../components/svg/leftGate";
-import RightGate from "../components/svg/rightGate";
-import Human from "../components/svg/human";
+import Clouds from "../components/svg/unused/clouds";
+import College from "../components/svg/unused/college";
+import LeftWall from "../components/svg/unused/leftWall";
+import RightWall from "../components/svg/unused/rightWall";
+import Floor from "../components/svg/unused/floor";
+import LeftGate from "../components/svg/unused/leftGate";
+import RightGate from "../components/svg/unused/rightGate";
+import Human from "../components/svg/unused/human";
 import { gateOpen } from "../components/functions/gateOpen";
 import { resetGame } from "../components/functions/resetGame";
 import BasicButton from "../components/functions/basicButton";

@@ -2,7 +2,7 @@
 
 import React, { Suspense } from "react";
 import BasicButton from "../components/functions/basicButton";
-import Clouds from "../components/svg/clouds";
+import Clouds from "../components/svg/unused/clouds";
 import { useSearchParams } from "next/navigation";
 
 function IsolatePage() {
