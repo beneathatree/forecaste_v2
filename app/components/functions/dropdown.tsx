@@ -14,7 +14,7 @@ const Dropdown = () => {
   }, [isOpen]);
 
   return (
-    <div className="absolute right-3 top-3 inline-block text-left overflow-visible z-50">
+    <div className="absolute right-3 top-3 inline-block text-left overflow-visible z-50 transition-all-300">
       <div>
         <button
           onClick={toggleDropdown}
@@ -28,7 +28,7 @@ const Dropdown = () => {
         >
           Options
           <svg
-            className="ml-2 -mr-1 h-5 w-5"
+            className={`ml-2 -mr-1 mt-[-2] h-5 w-5 transition-transform duration-200 ${isOpen ? '-rotate-180' : 'rotate-0'}`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

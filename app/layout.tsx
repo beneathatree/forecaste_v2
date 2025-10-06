@@ -27,7 +27,7 @@ export default function RootLayout({
           className="w-[400px] flex relative justify-center items-center flex-col bg-white border border-black">
           <h1 
             id="title"
-            className="font-sans text-blue-500">
+            className="font-sans text-blue-500 pt-4">
             forecaste
           </h1>
           <div 
