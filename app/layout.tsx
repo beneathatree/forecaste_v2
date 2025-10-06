@@ -34,7 +34,7 @@ export default function RootLayout({
           <h1 
             id="title"
             className={`${primaryFont.className} text-lg text-blue-500 p-5 pb-0 mt-1`}>
-            forecaste
+            <strong>forecaste</strong>
           </h1>
           <div 
           id="game-container" 

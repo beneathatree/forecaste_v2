@@ -16,7 +16,7 @@ export default function Home() {
           <College className="absolute left-0 right-0 bottom-[220px] z-0"/>
       </div>
       <div 
-        className="z-[50] h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"
+        className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"
         id="buttons-text-and-interactivity">
           <p>
           You have just arrived at a new premier institution. 
