@@ -14,7 +14,7 @@ const Dropdown = () => {
 //   }, [isOpen]);
 
   return (
-    <div className="absolute right-3 top-3 inline-block text-left overflow-visible z-50 transition-all-300">
+    <div className="absolute right-4 top-4 inline-block text-left overflow-visible z-50 transition-all-300">
       <div>
         <button
           onClick={toggleDropdown}

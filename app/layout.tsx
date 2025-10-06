@@ -30,10 +30,10 @@ export default function RootLayout({
       <body className="flex flex-col gap-5 items-center justify-center">
         <div 
           id="app" 
-          className="w-[400px] flex relative justify-center items-center flex-col bg-white border border-black">
+          className="w-[400px] flex relative justify-center items-start flex-col bg-white border border-black">
           <h1 
             id="title"
-            className={`${primaryFont.className} text-lg text-blue-500 pt-4`}>
+            className={`${primaryFont.className} text-lg text-blue-500 p-5 pb-0 mt-1`}>
             forecaste
           </h1>
           <div 

@@ -3,7 +3,7 @@ import * as React from "react";
 const College = ({
   id = "people_in_college",
   className = "",
-  width = "190",
+  width = "",
 }) => (
   <svg
     width={width}
