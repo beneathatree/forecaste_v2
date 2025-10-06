@@ -3,6 +3,7 @@
 import BasicButton from "../components/functions/basicButton";
 import Clouds from "../components/svg/clouds";
 import { useRouter } from "next/navigation";
+import Dropdown from "../components/functions/dropdown";
 
 export default function Home() {
   const router = useRouter();
@@ -23,6 +24,7 @@ export default function Home() {
         className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden "
       >
         <Clouds className="absolute top-[50px] left-[40px] right-[30px]" />
+        <Dropdown/>
       </div>
       <div
         className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-center relative p-5"
