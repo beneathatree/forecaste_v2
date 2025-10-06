@@ -9,9 +9,9 @@ const Dropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    console.log(`isOpen is ${isOpen}`);
-  }, [isOpen]);
+//   useEffect(() => {
+//     console.log(`isOpen is ${isOpen}`);
+//   }, [isOpen]);
 
   return (
     <div className="absolute right-3 top-3 inline-block text-left overflow-visible z-50 transition-all-300">
@@ -26,7 +26,7 @@ const Dropdown = () => {
                             : "hover:bg-gray-50 text-gray-700 border border-gray-700"
                         }`}
         >
-          Options
+          Indicators
           <svg
             className={`ml-2 -mr-1 mt-[-2] h-5 w-5 transition-transform duration-200 ${isOpen ? '-rotate-180' : 'rotate-0'}`}
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,28 @@ const Dropdown = () => {
                             hover:bg-gray-100"
               role="menuitem"
             >
-              Account settings
+              Resilience
+            </p>
+            <p
+              className="block px-4 py-2 text-sm text-gray-700 
+                            hover:bg-gray-100"
+              role="menuitem"
+            >
+              Performance
+            </p>
+            <p
+              className="block px-4 py-2 text-sm text-gray-700 
+                            hover:bg-gray-100"
+              role="menuitem"
+            >
+              Self-esteem
+            </p>
+            <p
+              className="block px-4 py-2 text-sm text-gray-700 
+                            hover:bg-gray-100"
+              role="menuitem"
+            >
+              Belonging
             </p>
           </div>
         </div>
