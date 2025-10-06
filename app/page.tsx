@@ -15,7 +15,7 @@ export default function Home() {
           <Dropdown/>
           <People className="absolute bottom-[35px] right-[117px] z-20"/>
           <College className="absolute left-0 right-0 bottom-[220px] z-10"/>
-          <Ground className="absolute bottom-0 z-0"/>
+          <Ground className="absolute bottom-0 z-0 h-[600px] w-auto" />
       </div>
       <div 
         className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"
