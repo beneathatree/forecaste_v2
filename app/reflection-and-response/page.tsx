@@ -16,7 +16,7 @@ export default function Home() {
         className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
         id="buttons-text-and-interactivity">
             <p>
-                A few days later, a momment says,
+                A few days later, a comment says,
                 &quot;Thank you for Writing this. I&#39;ve been holding this in for so long.&quot;
                 Another message says
                 &quot;Do you want to join our reading circle?&quot;

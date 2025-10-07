@@ -21,7 +21,7 @@ export default function Home() {
         );
       case 'organize':
         return (
-          <li><BasicButton href="/velivada-circle" id="velivada-circle-btn" text="Velivada circle." className="hover:bg-gray-800"/></li>
+          <li><BasicButton href="/organize-and-mobilize" id="organize-mobilize-btn" text="Organize and mobilize." className="hover:bg-gray-800"/></li>
         );
       case 'write':
         return (
