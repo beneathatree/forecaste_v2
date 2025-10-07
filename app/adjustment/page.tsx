@@ -32,7 +32,7 @@ export default function Home() {
       >
         <p>
           You are also in confusion and are going through a lot of cultural
-          shocks. You have been facing microaggressions, othering and subtle
+          shocks. You have been facing micro-aggressions, othering and subtle
           casteism. What do you do?
         </p>
         <ul
