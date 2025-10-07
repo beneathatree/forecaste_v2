@@ -34,7 +34,7 @@ export default function AudioManager() {
       <BasicButton
         onClick={togglePlayPause}
         className={buttonClassName}
-        text={isPlaying ? 'Pause' : 'Play'}
+        text={isPlaying ? 'Pause Audio' : 'Play Audio'}
       />
   );
 }
