@@ -27,14 +27,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="flex flex-col gap-5 items-center justify-center">
+            <body className="flex flex-col h-screen w-screen gap-5 items-center justify-center">
                 <div
                     id="app"
-                    className="w-full flex relative justify-center items-start flex-col bg-amber-100 border border-black"
+                    className="w-full h-full flex relative justify-center items-start flex-col bg-amber-100 border border-black"
                 >
                     <h1
                         id="title"
-                        className={`${primaryFont.className} text-lg text-blue-500 p-5 pb-0 mt-1`}
+                        className={`${primaryFont.className} text-lg text-blue-500 p-5 pb-0 mt-1 z-50`}
                     >
                         <strong>forecaste</strong>
                     </h1>
@@ -45,7 +45,8 @@ export default function RootLayout({
                         <Suspense fallback={null}>{children}</Suspense>
                     </div>
                 </div>
-                <div className="flex gap-2">
+                {/* TODO: Add reset button and audio manager */}
+                {/* <div className="flex gap-2">
                     <BasicButton
                         href="/"
                         id="reset-btn"
@@ -55,7 +56,7 @@ export default function RootLayout({
                     <Suspense fallback={null}>
                         <AudioManager />
                     </Suspense>
-                </div>
+                </div> */}
             </body>
         </html>
     );

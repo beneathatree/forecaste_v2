@@ -1,19 +1,6 @@
 @import "tailwindcss";
 
-body {
-  font-family: Helvetica, sans-serif;
-  height: 99%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-}
-
-html{
-    height: 99%;
-}
-
-svg{
+svg {
     display: block;
     height: auto;
     max-width: 100%;
