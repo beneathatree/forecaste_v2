@@ -1,5 +1,3 @@
-"use client";
-
 import BasicButton from "./components/functions/basicButton";
 import Dropdown from "./components/functions/dropdown";
 import People from "./components/svg/v2/people";
@@ -28,7 +26,7 @@ export default function Home() {
                     id="possible-actions"
                     className="flex flex-row w-full justify-left mt-2"
                 >
-                    <BasicButton text="Start!" href="/adjustment" />
+                    {/* <BasicButton text="Start!" href="/adjustment" /> */}
                 </div>
             </div>
         </>
