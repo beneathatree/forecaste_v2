@@ -5,6 +5,7 @@ import Dropdown from "./components/functions/dropdown";
 import People from "./components/svg/v2/people";
 import College from "./components/svg/v2/college";
 import Ground from "./components/svg/v2/ground";
+import TypingText from "./components/functions/typingText";
 
 export default function Home() {
     return (
@@ -19,14 +20,10 @@ export default function Home() {
                 <Ground className="absolute bottom-0 left-0 right-0" />
             </div>
             <div
-                className="z-[30] h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"
+                className="z-30 h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"
                 id="buttons-text-and-interactivity"
             >
-                <p>
-                    You have just arrived at a new premier institution. You are
-                    proud of your achievements, are also in awe of your
-                    surroundings and your peers.
-                </p>
+                <TypingText text="You have just arrived at a new premier institution. You are proud of your achievements, are also in awe of your surroundings and your peers." />
                 <div
                     id="possible-actions"
                     className="flex flex-row w-full justify-left mt-2"
