@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="flex flex-col h-screen w-screen gap-5 items-center justify-center">
+            <body className="flex flex-col h-dvh w-screen gap-5 items-center justify-center overflow-hidden">
                 <div
                     id="app"
                     className="w-screen h-screen flex relative justify-center items-start flex-col bg-amber-100"
@@ -40,7 +40,7 @@ export default function RootLayout({
                     </h1>
                     <div
                         id="game-container"
-                        className={`${primaryFont.className} w-screen h-screen flex flex-col items-center justify-center`}
+                        className={`${primaryFont.className} w-full h-full flex flex-col items-center justify-center`}
                     >
                         <Suspense fallback={null}>{children}</Suspense>
                     </div>
