@@ -1,20 +1,25 @@
 "use client";
 
+import { ComponentProps } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 interface TypingTextProps {
     text: string;
+    className?: string;
+    speed?: ComponentProps<typeof TypeAnimation>["speed"];
+    onComplete?: () => void;
 }
 
-export default function TypingText({ text }: TypingTextProps) {
+export default function TypingText({ text, className, speed = 20, onComplete }: TypingTextProps) {
+    const sequence = onComplete ? [text, onComplete] : [text];
+
     return (
-        <div className=" md:bg-amber-100 md:border-t md:border-black md:pt-2 md:pb-1 md:px-4 md:absolute md:left-0 md:right-0 md:bottom-0">
-            <TypeAnimation
-                sequence={[text]}
-                wrapper="div"
-                speed={50}
-                cursor={false}
-            />
-        </div>
+        <TypeAnimation
+            sequence={sequence}
+            wrapper="span"
+            speed={speed}
+            cursor={false}
+            className={className}
+        />
     );
 }

@@ -1,34 +1,43 @@
-import BasicButton from "./components/functions/basicButton";
-import Dropdown from "./components/functions/dropdown";
-import People from "./components/svg/v2/people";
-import College from "./components/svg/v2/college";
-import Ground from "./components/svg/v2/ground";
+"use client";
+
+import { useState } from "react";
 import TypingText from "./components/functions/typingText";
 
 export default function Home() {
+    const [typingComplete, setTypingComplete] = useState(false);
+
+    const handleTypingComplete = () => {
+        setTimeout(() => setTypingComplete(true), 700);
+    };
+
     return (
-        <>
+        <div className="h-screen bg-white flex items-center justify-center relative">
             <div
-                id="graphics-text-and-animations"
-                className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden "
+                className={`transition-transform duration-700 ease-out ${
+                    typingComplete ? "-translate-y-16" : "translate-y-0"
+                }`}
             >
-                <Dropdown />
-                <People className="absolute top-[65%] md:top-[57%] lg:top-[52%] xl:top-[55%] left-[100px] md:left-[150px] lg:left-[325px] xl:left-[500px] right-[100px] md:right-[150px] lg:right-[325px] xl:right-[500px] w-auto h-auto z-20" />
-                <College className="absolute left-0 right-0 bottom-[220px] z-10" />
-                <Ground className="absolute bottom-0 left-0 right-0" />
+                <TypingText
+                    text="Forecaste"
+                    className="text-8xl font-bold"
+                    speed={15}
+                    onComplete={handleTypingComplete}
+                />
             </div>
             <div
-                className="z-30 h-full w-full flex flex-col items-start pb-3 justify-top relative p-5 mt-10"
-                id="buttons-text-and-interactivity"
+                className={`absolute top-1/2 mt-8 max-w-3xl text-center px-8 transition-all duration-700 ${
+                    typingComplete
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4"
+                }`}
             >
-                <TypingText text="You have just arrived at a new premier institution. You are proud of your achievements, are also in awe of your surroundings and your peers." />
-                <div
-                    id="possible-actions"
-                    className="flex flex-row w-full justify-left mt-2"
-                >
-                    {/* <BasicButton text="Start!" href="/adjustment" /> */}
-                </div>
+                {typingComplete && (
+                    <TypingText
+                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        speed={25}
+                    />
+                )}
             </div>
-        </>
+        </div>
     );
 }
