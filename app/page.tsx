@@ -26,8 +26,12 @@ export default function Home() {
     return (
         <div className="h-screen bg-white flex items-center justify-center relative overflow-hidden">
             <div
-                className={`transition-transform duration-700 ease-out ${
-                    typingComplete ? "-translate-y-16" : "translate-y-0"
+                className={`transition-transform ease-out ${
+                    showCharacters
+                        ? "-translate-y-48 duration-1000"
+                        : typingComplete
+                        ? "-translate-y-16 duration-700"
+                        : "translate-y-0 duration-700"
                 }`}
             >
                 <TypingText
