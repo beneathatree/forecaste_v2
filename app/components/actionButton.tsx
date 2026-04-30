@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import type React from "react";
 import { Special_Elite } from "next/font/google";
 
 const primaryFont = Special_Elite({
@@ -16,7 +15,8 @@ type ActionButtonProps = {
 	text: string;
 	href?: string;
 	className?: string;
-} & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "className">;
+	onClick?: () => void;
+};
 
 const variantStyles: Record<Variant, string> = {
 	positive: "bg-green-700 hover:bg-green-600",
@@ -29,21 +29,25 @@ export default function ActionButton({
 	text,
 	href = "/",
 	className = "",
-	...props
+	onClick,
 }: ActionButtonProps) {
 	const baseClass = `z-30 inline-block pt-2 pb-1 px-3 text-white rounded-md transition-all duration-200 ${variantStyles[variant]} ${primaryFont.className} ${className}`;
 
+	if (onClick) {
+		return (
+			<div>
+				<button onClick={onClick} className={baseClass}>
+					{text}
+				</button>
+			</div>
+		);
+	}
+
 	return (
 		<div>
-			<button>
-				<Link
-					href={href}
-					className={baseClass}
-					{...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
-				>
-					{text}
-				</Link>
-			</button>
+			<Link href={href} className={baseClass}>
+				{text}
+			</Link>
 		</div>
 	);
 }
