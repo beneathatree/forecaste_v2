@@ -25,7 +25,7 @@ export default function ActionButton({
     className = "",
     onClick,
 }: ActionButtonProps) {
-    const baseClass = `btn-emboss z-30 inline-block px-3 py-2 text-[10px] tracking-wide border-none cursor-pointer select-none transition-[transform] duration-[50ms] ease-in-out active:translate-y-[5px] text-[14px]! ${variantStyles[variant]} ${className}`;
+    const baseClass = `btn-emboss z-30 inline-block px-4 pt-3 pb-1.5 text-[16px] tracking-wide border-none cursor-pointer select-none transition-[transform] duration-[50ms] ease-in-out active:translate-y-[5px] text-[14px]! ${variantStyles[variant]} ${className}`;
 
     if (onClick) {
         return (

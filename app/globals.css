@@ -11,13 +11,21 @@ svg {
     --shadow-dark: rgba(0, 0, 0, 0.35);
     --shadow-ground: rgba(0, 0, 0, 0.55);
     --depth: 6px;
+    --offset-x: -3px;
 
     box-shadow: 0 1px 0 var(--shadow-dark) inset,
         1px 0 0 var(--shadow-light) inset, -1px 0 0 var(--shadow-dark) inset,
         0 -1px 0 var(--shadow-light) inset,
-        0 var(--depth) 0 var(--shadow-ground);
+        var(--offset-x) var(--depth) 0 var(--shadow-ground);
 
     border-radius: 6px;
+}
+
+.btn-emboss:active {
+    box-shadow: 0 1px 0 var(--shadow-dark) inset,
+        1px 0 0 var(--shadow-light) inset, -1px 0 0 var(--shadow-dark) inset,
+        0 -1px 0 var(--shadow-light) inset,
+        0 0 0 var(--shadow-ground);
 }
 
 .btn-emboss:active {
