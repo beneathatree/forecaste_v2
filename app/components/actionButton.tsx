@@ -19,9 +19,9 @@ type ActionButtonProps = {
 };
 
 const variantStyles: Record<Variant, string> = {
-	positive: "bg-green-700 hover:bg-green-600",
-	negative: "bg-red-700 hover:bg-red-600",
-	neutral: "bg-blue-700 hover:bg-blue-600",
+	positive: "bg-green-600 hover:bg-green-700",
+	negative: "bg-red-600 hover:bg-red-700",
+	neutral: "bg-blue-600 hover:bg-blue-700",
 };
 
 export default function ActionButton({
