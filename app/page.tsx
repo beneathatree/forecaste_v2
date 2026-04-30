@@ -81,7 +81,11 @@ export default function Home() {
             </div>
 
             {/* buttons */}
-            <div className="absolute bottom-20 left-0 right-0 flex justify-center items-center flex-row gap-4">
+            <div
+                className={`absolute bottom-20 left-0 right-0 flex justify-center items-center flex-row gap-4 transition-all duration-1000 ease-out ${
+                    showCharacters ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+            >
                 <ActionButton
                     variant="positive"
                     text="Start Game"
