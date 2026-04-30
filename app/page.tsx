@@ -82,7 +82,11 @@ export default function Home() {
 
             {/* buttons */}
             <div className="absolute bottom-20 left-0 right-0 flex justify-center items-center flex-row gap-4">
-                <ActionButton variant="positive" text="Start Game" />
+                <ActionButton
+                    variant="positive"
+                    text="Start Game"
+                    onClick={() => console.log("Start Game")}
+                />
                 <ActionButton variant="neutral" text="About" />
             </div>
         </div>
