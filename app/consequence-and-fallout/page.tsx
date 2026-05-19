@@ -1,31 +1,32 @@
-"use client"
+"use client";
 
-import BasicButton from "../components/functions/basicButton";
-import Clouds from "../components/svg/unused/clouds";
-//import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { goBack } from "../components/functions/goBack";
+import { SceneTemplate, type Action } from "../components/page-templates";
 
 export default function Home() {
-  return (
-    <>
-      <div 
-        id="graphics-text-and-animations" 
-        className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden">
-            <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
-      </div>
-      <div 
-        className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
-        id="buttons-text-and-interactivity">
-            <p>
-                The admin has called a meeting. A circular goes out calling your protest unautorized activity. Some mentors warn you for you being watched, and to be careful.
-                Your scholarship goes under review for unknown reasons. But the velivada circle anyway has grown louder, stronger. 
-                The hostel repainted, the walls are new too. The professor still teaches - still says things that twist in your gut. No one brings up what happened. Not even you.
-                One night, you overhear someone talking about &#39;that reservation kid who overreacted&#39; on an anonymous blog. Your name isn&#39;t said.
-                You get your grades back. Decent but hollow. You haven&#39;t interacted with any new people. You stopped writing blogs.
-            </p>
-            <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton href="/internal-growth" id="growth-btn" text="Internal growth." className="hover:bg-gray-800"/></li>
-            </ul>
-      </div>
-    </>
-  );
+    const router = useRouter();
+    const actions: Action[] = [
+        {
+            text: "Internal growth.",
+            variant: "positive",
+            onClick: () => {
+                router.push("/internal-growth");
+            },
+        },
+        {
+            text: "Go back",
+            variant: "negative",
+            onClick: () => {
+                goBack(router);
+            },
+        },
+    ];
+
+    return (
+        <SceneTemplate
+            text="The admin has called a meeting. A circular goes out calling your protest unauthorized activity. Some mentors warn you that you are being watched and to be careful. Your scholarship goes under review for unknown reasons. But the Velivada Circle has grown louder, stronger anyway. The hostel is repainted, the walls are new too. The professor still teaches, still says things that twist in your gut. No one brings up what happened. Not even you. One night, you overhear someone talking about 'that reservation kid who overreacted' on an anonymous blog. Your name isn't said. You get your grades back. Decent but hollow. You haven't interacted with any new people. You stopped writing blogs."
+            actions={actions}
+        ></SceneTemplate>
+    );
 }
