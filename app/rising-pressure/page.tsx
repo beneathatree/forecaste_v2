@@ -1,30 +1,32 @@
-"use client"
+"use client";
 
-import BasicButton from "../components/functions/basicButton";
-import Clouds from "../components/svg/unused/clouds";
-//import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { goBack } from "../components/functions/goBack";
+import { SceneTemplate, type Action } from "../components/page-templates";
 
 export default function Home() {
-  return (
-    <>
-      <div 
-        id="graphics-text-and-animations" 
-        className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden">
-            <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
-      </div>
-      <div 
-        className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
-        id="buttons-text-and-interactivity">
-            <p>
-                Deadlines loom. Syllabus piles up. 
-                The Classroom feels colder now. You participate less in classes, your questions hang unasked. 
-                You&#39;re pushing through late nights, but the gaps in guidance and belonging weigh you down. 
-                You try to keep up, but it feels like running uphill.
-            </p>
-            <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-                <li><BasicButton href="inciting-incident" id="incident-btn" text="Inciting incident" className="hover:bg-gray-800"/></li>
-            </ul>
-      </div>
-    </>
-  );
+    const router = useRouter();
+    const actions: Action[] = [
+        {
+            text: "Inciting incident",
+            variant: "positive",
+            onClick: () => {
+                router.push("/inciting-incident");
+            },
+        },
+        {
+            text: "Go back",
+            variant: "negative",
+            onClick: () => {
+                goBack(router);
+            },
+        },
+    ];
+
+    return (
+        <SceneTemplate
+            text="Deadlines loom. Syllabus piles up. The Classroom feels colder now. You participate less in classes, your questions hang unasked. You're pushing through late nights, but the gaps in guidance and belonging weigh you down. You try to keep up, but it feels like running uphill."
+            actions={actions}
+        ></SceneTemplate>
+    );
 }
