@@ -2,7 +2,7 @@
 
 import { Howl } from "howler";
 
-type Variant = "positive" | "negative" | "neutral";
+export type Variant = "positive" | "negative" | "neutral";
 
 type ActionButtonProps = {
     variant: Variant;

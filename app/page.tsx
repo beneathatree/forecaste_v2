@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import TypingText from "./components/functions/typingText";
 import Character1 from "./components/svg/v3/Character1";
 import Character2 from "./components/svg/v3/Character2";
@@ -9,6 +10,7 @@ import Character4 from "./components/svg/v3/Character4";
 import ActionButton from "./components/actionButton";
 
 export default function Home() {
+    const router = useRouter();
     const [typingComplete, setTypingComplete] = useState(false);
     const [bodyTypingComplete, setBodyTypingComplete] = useState(false);
     const [showCharacters, setShowCharacters] = useState(false);
@@ -24,6 +26,12 @@ export default function Home() {
         }, 1000);
     };
 
+    const handleStartGame = () => {
+        //todo: this should wait for the sound to finish playing
+        // and then play animation
+        router.push("/arrival");
+    };
+
     return (
         <div className="h-screen bg-white flex items-center justify-center relative overflow-hidden">
             <div
@@ -31,8 +39,8 @@ export default function Home() {
                     showCharacters
                         ? "-translate-y-48 duration-1000"
                         : typingComplete
-                        ? "-translate-y-16 duration-700"
-                        : "translate-y-0 duration-700"
+                          ? "-translate-y-16 duration-700"
+                          : "translate-y-0 duration-700"
                 }`}
             >
                 <TypingText
@@ -47,13 +55,13 @@ export default function Home() {
                     typingComplete && !bodyTypingComplete
                         ? "opacity-100 translate-y-0"
                         : bodyTypingComplete
-                        ? "opacity-0 -translate-y-4"
-                        : "opacity-0 translate-y-4"
+                          ? "opacity-0 -translate-y-4"
+                          : "opacity-0 translate-y-4"
                 }`}
             >
                 {typingComplete && (
                     <TypingText
-                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        text="Forecaste is a choice-driven, narrative game. You play as a Dalit student navigating everyday academic life. Classrooms, hostels, administration and peer spaces where power, bias, and risk shape every decision."
                         speed={25}
                         onComplete={handleBodyTypingComplete}
                     />
@@ -83,13 +91,15 @@ export default function Home() {
             {/* buttons */}
             <div
                 className={`absolute bottom-20 left-0 right-0 flex justify-center items-center flex-row gap-4 transition-all duration-1000 ease-out ${
-                    showCharacters ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    showCharacters
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
                 }`}
             >
                 <ActionButton
                     variant="positive"
                     text="Start Game"
-                    onClick={() => console.log("Start Game")}
+                    onClick={handleStartGame}
                 />
                 <ActionButton variant="neutral" text="About" />
             </div>
