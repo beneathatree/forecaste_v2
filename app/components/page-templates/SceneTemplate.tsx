@@ -18,20 +18,20 @@ export default function SceneTemplate({
     className = "",
 }: SceneTemplateProps) {
     return (
-        <>
+        <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden">
             <div
                 id="graphics-text-and-animations"
-                className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden"
+                className="absolute inset-0 overflow-hidden"
             >
                 {children}
             </div>
             <div
-                className={`z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5 ${className}`}
+                className={`z-[30] relative flex h-full w-full flex-col items-center justify-center p-5 text-center ${className}`}
                 id="buttons-text-and-interactivity"
             >
                 <p>{text}</p>
                 <ul
-                    className="w-full flex flex-col gap-2 mt-2 items-start"
+                    className="mt-2 flex w-full flex-row items-center justify-center gap-2"
                     id="possible-actions"
                 >
                     {actions.map((action, index) => (
@@ -45,6 +45,6 @@ export default function SceneTemplate({
                     ))}
                 </ul>
             </div>
-        </>
+        </div>
     );
 }
