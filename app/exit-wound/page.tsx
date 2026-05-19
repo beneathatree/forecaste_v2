@@ -1,30 +1,24 @@
-"use client"
+"use client";
 
-import BasicButton from "../components/functions/basicButton";
-import Clouds from "../components/svg/unused/clouds";
-//import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { SceneTemplate, type Action } from "../components/page-templates";
 
 export default function Home() {
-  return (
-    <>
-      <div 
-        id="graphics-text-and-animations" 
-        className="absolute top-0 bottom-0 right-0 left-0 overflow-hidden">
-            <Clouds className="absolute top-[50px] left-[40px] right-[30px]"/>
-      </div>
-      <div 
-        className="z-[30] h-[650px] w-full flex flex-col items-start pb-3 justify-center relative p-5"
-        id="buttons-text-and-interactivity">
-            <p>
-                You pack quietly. You leave before the summer ends. 
-                You write no letters. You give no speeches. But your blog shows everything.
-                The game ends not in defeat, but in departure.
-            </p>
-            <ul className="w-full flex flex-col gap-2 mt-2 items-start" id="possible-actions">
-              The game ends here, the journey does not. If you&apos;d lke to play again,
-              <BasicButton href="/" id="reset-btn" text="Start Over" className="hover:bg-green-600"/>
-            </ul>
-      </div>
-    </>
-  );
+    const router = useRouter();
+    const actions: Action[] = [
+        {
+            text: "Start over",
+            variant: "positive",
+            onClick: () => {
+                router.push("/");
+            },
+        },
+    ];
+
+    return (
+        <SceneTemplate
+            text="You pack quietly. You leave before the summer ends. You write no letters. You give no speeches. But your blog shows everything. The game ends not in defeat, but in departure. The game ends here, the journey does not. If you'd like to play again:"
+            actions={actions}
+        ></SceneTemplate>
+    );
 }
