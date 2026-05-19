@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation";
 import { goBack } from "../components/functions/goBack";
 import { SceneTemplate, type Action } from "../components/page-templates";
-import Clouds from "../components/svg/unused/clouds";
 
 export default function Home() {
     const router = useRouter();
