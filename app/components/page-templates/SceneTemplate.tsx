@@ -29,7 +29,7 @@ export default function SceneTemplate({
                 className={`z-[30] relative flex h-full w-full flex-col items-center justify-center p-5 text-center ${className}`}
                 id="buttons-text-and-interactivity"
             >
-                <p>{text}</p>
+                <p className="max-w-3xl">{text}</p>
                 <ul
                     className="mt-2 flex w-full flex-row items-center justify-center gap-2"
                     id="possible-actions"
