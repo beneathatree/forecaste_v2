@@ -26,7 +26,7 @@ export default function SceneTemplate({
                 {children}
             </div>
             <div
-                className={`z-[30] relative flex h-full w-full flex-col items-center justify-center p-5 text-center ${className}`}
+                className={`z-30 relative flex h-full w-full flex-col items-center justify-center p-5 text-center ${className}`}
                 id="buttons-text-and-interactivity"
             >
                 <p className="max-w-3xl">{text}</p>
