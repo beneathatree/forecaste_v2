@@ -1,18 +1,24 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { goBack } from "../components/functions/goBack";
 import { SceneTemplate, type Action } from "../components/page-templates";
-import Character1 from "../components/svg/v3/Character1";
-import Character2 from "../components/svg/v3/Character2";
-import Character3 from "../components/svg/v3/Character3";
-import Character4 from "../components/svg/v3/Character4";
 
 export default function Arrival() {
+    const router = useRouter();
     const actions: Action[] = [
         {
             text: "Adjust to the new environment",
             variant: "positive",
             onClick: () => {
-                // TODO: navigate to next scene
+                router.push("/adjustment");
+            },
+        },
+        {
+            text: "Go back",
+            variant: "negative",
+            onClick: () => {
+                goBack(router);
             },
         },
     ];
