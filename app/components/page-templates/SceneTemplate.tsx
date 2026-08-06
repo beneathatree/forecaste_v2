@@ -18,7 +18,7 @@ export default function SceneTemplate({
     className = "",
 }: SceneTemplateProps) {
     return (
-        <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden">
+        <div className="relative flex h-[100svh] w-screen items-center justify-center overflow-hidden">
             <div
                 id="graphics-text-and-animations"
                 className="absolute inset-0 overflow-hidden"
