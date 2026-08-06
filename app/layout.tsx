@@ -1,7 +1,9 @@
 import "./globals.css";
 import { Metadata, Viewport } from "next";
-import React, { Suspense } from "react";
+import React from "react";
 import { Special_Elite } from "next/font/google";
+import SettingsProvider from "./components/settings/SettingsProvider";
+import SettingsMenu from "./components/settings/SettingsMenu";
 
 const primaryFont = Special_Elite({
     weight: "400",
@@ -25,7 +27,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${primaryFont.className}`}>{children}</body>
+            <body className={`${primaryFont.className}`}>
+                <SettingsProvider>
+                    {children}
+                    <SettingsMenu />
+                </SettingsProvider>
+            </body>
         </html>
     );
 }
