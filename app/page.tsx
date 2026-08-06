@@ -37,25 +37,25 @@ export default function Home() {
     };
 
     return (
-        <div className="h-screen bg-white flex items-center justify-center relative overflow-hidden">
+        <div className="h-[100svh] bg-white flex items-center justify-center relative overflow-hidden">
             <div
                 className={`transition-transform ease-out ${
                     showCharacters
-                        ? "-translate-y-48 duration-1000"
+                        ? "-translate-y-32 md:-translate-y-48 duration-1000"
                         : typingComplete
-                          ? "-translate-y-16 duration-700"
+                          ? "-translate-y-10 md:-translate-y-16 duration-700"
                           : "translate-y-0 duration-700"
                 }`}
             >
                 <TypingText
                     text="Forecaste"
-                    className="text-8xl font-bold"
+                    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold whitespace-nowrap"
                     speed={15}
                     onComplete={handleTypingComplete}
                 />
             </div>
             <div
-                className={`absolute top-1/2 mt-8 max-w-3xl text-center px-8 transition-all duration-700 ${
+                className={`absolute top-1/2 mt-6 md:mt-8 max-w-3xl text-center text-sm sm:text-base px-6 md:px-8 transition-all duration-700 ${
                     typingComplete && !bodyTypingComplete
                         ? "opacity-100 translate-y-0"
                         : bodyTypingComplete
@@ -94,7 +94,7 @@ export default function Home() {
 
             {/* buttons */}
             <div
-                className={`absolute bottom-20 left-0 right-0 flex justify-center items-center flex-row gap-4 transition-all duration-1000 ease-out ${
+                className={`absolute bottom-20 left-0 right-0 flex justify-center items-center flex-row flex-wrap gap-4 px-6 transition-all duration-1000 ease-out ${
                     showCharacters
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-8"

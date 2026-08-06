@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${primaryFont.className}`}>
+            <body className={`${primaryFont.className} overscroll-none`}>
                 <SettingsProvider>
                     {children}
                     <SettingsMenu />
