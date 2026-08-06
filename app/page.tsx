@@ -8,6 +8,7 @@ import Character2 from "./components/svg/v3/Character2";
 import Character3 from "./components/svg/v3/Character3";
 import Character4 from "./components/svg/v3/Character4";
 import ActionButton from "./components/actionButton";
+import { useSettings } from "./components/settings/SettingsProvider";
 
 export default function Home() {
     const router = useRouter();
@@ -15,15 +16,18 @@ export default function Home() {
     const [bodyTypingComplete, setBodyTypingComplete] = useState(false);
     const [showCharacters, setShowCharacters] = useState(false);
 
+    const { animationMultiplier } = useSettings();
+    const beat = (ms: number) => ms * animationMultiplier;
+
     const handleTypingComplete = () => {
-        setTimeout(() => setTypingComplete(true), 700);
+        setTimeout(() => setTypingComplete(true), beat(700));
     };
 
     const handleBodyTypingComplete = () => {
         setTimeout(() => {
             setBodyTypingComplete(true);
-            setTimeout(() => setShowCharacters(true), 700);
-        }, 1000);
+            setTimeout(() => setShowCharacters(true), beat(700));
+        }, beat(1000));
     };
 
     const handleStartGame = () => {

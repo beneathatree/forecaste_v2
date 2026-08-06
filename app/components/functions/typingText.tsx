@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useSettings } from "../settings/SettingsProvider";
 
 /** Typing speed constants — tweak these to retune every typing effect in the game. */
 
@@ -33,6 +34,13 @@ export default function TypingText({
     const onCompleteRef = useRef(onComplete);
     onCompleteRef.current = onComplete;
 
+    const { animationMultiplier } = useSettings();
+    const timelineRef = useRef<gsap.core.Timeline>(null);
+    // Read inside the build effect without making it a dependency — rebuilding
+    // the timeline mid-sentence would restart the text from empty.
+    const multiplierRef = useRef(animationMultiplier);
+    multiplierRef.current = animationMultiplier;
+
     useEffect(() => {
         const element = spanRef.current;
         if (!element) return;
@@ -49,6 +57,8 @@ export default function TypingText({
             delay: START_DELAY_MS / 1000,
             onComplete: () => onCompleteRef.current?.(),
         });
+        timeline.timeScale(1 / multiplierRef.current);
+        timelineRef.current = timeline;
 
         characters.forEach((_, index) => {
             const jitter = 1 + (Math.random() - 0.5) * SPEED_JITTER * 2;
@@ -65,8 +75,14 @@ export default function TypingText({
 
         return () => {
             timeline.kill();
+            timelineRef.current = null;
         };
     }, [text, speed]);
+
+    // Speed changes apply live, mid-sentence, without restarting the timeline.
+    useEffect(() => {
+        timelineRef.current?.timeScale(1 / animationMultiplier);
+    }, [animationMultiplier]);
 
     return <span ref={spanRef} className={className} />;
 }
